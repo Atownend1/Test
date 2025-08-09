@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Never Lose Another Lead - Automated Lead Nurture System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#64748b'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+        }
+        .floating-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 50;
+        }
+        @media (min-width: 768px) {
+            .floating-btn {
+                display: none;
+            }
+        }
+        .countdown {
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="gradient-bg">
+    <!-- Urgency Banner -->
+    <div class="bg-red-600 text-white py-2 px-4 text-center text-sm">
+        <div class="flex items-center justify-center space-x-4 flex-wrap">
+            <div class="flex items-center space-x-2">
+                <span>⏰</span>
+                <span>Launch Special Ends In: <span class="countdown" id="countdown">23:59:59</span></span>
+            </div>
+            <div class="flex items-center space-x-2">
+                <span>👥</span>
+                <span><span id="visitors">247</span> people viewing this page</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <span class="text-2xl">⚡</span>
+                    <span class="text-xl font-bold text-gray-900">LeadNurture Pro</span>
+                </div>
+                <button class="border border-gray-300 px-4 py-2 rounded-md hover:bg-gray-50">Login</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto text-center">
+            <div class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm mb-4">
+                🚀 Launch Special - 50% Off First Month
+            </div>
+            <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                Never Lose Another Lead
+                <span class="text-blue-600 block">Again</span>
+            </h1>
+            <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+                The only lead nurture system that works <strong>inside your existing tools</strong>. 
+                No new apps, no training required. Your leads get nurtured automatically while you focus on closing deals.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+                <button class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg rounded-md font-medium">
+                    Start Free Trial →
+                </button>
+                <button class="border border-gray-300 px-8 py-4 text-lg rounded-md hover:bg-gray-50">
+                    Watch Demo
+                </button>
+            </div>
+            <p class="text-sm text-gray-500 mb-8">
+                ✅ 24-hour setup guarantee &nbsp;&nbsp; ✅ 30-day money-back guarantee &nbsp;&nbsp; ✅ No contracts
+            </p>
+            
+            <!-- Social Proof -->
+            <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm text-gray-600">
+                <div class="flex items-center space-x-2">
+                    <div class="flex -space-x-2">
+                        <div class="w-8 h-8 bg-blue-500 rounded-full border-2 border-white"></div>
+                        <div class="w-8 h-8 bg-green-500 rounded-full border-2 border-white"></div>
+                        <div class="w-8 h-8 bg-purple-500 rounded-full border-2 border-white"></div>
+                        <div class="w-8 h-8 bg-orange-500 rounded-full border-2 border-white"></div>
+                    </div>
+                    <span>Join 500+ businesses already using this</span>
+                </div>
+                <div class="flex items-center space-x-1">
+                    <span class="text-yellow-400">⭐⭐⭐⭐⭐</span>
+                    <span class="ml-2">4.9/5 from 200+ reviews</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Are You Burned Out From Lead Gen in 2025?
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    You're not alone. Business owners everywhere are struggling with the same lead nurturing challenges:
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white border border-l-4 border-l-red-500 p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center space-x-3 mb-3">
+                        <span class="text-red-500 text-xl">💬</span>
+                        <h3 class="text-lg font-semibold">Cold outreach fatigue</h3>
+                    </div>
+                    <p class="text-gray-600">Prospects are ghosting more often, even if they seemed interested a week ago</p>
+                </div>
+                <div class="bg-white border border-l-4 border-l-red-500 p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center space-x-3 mb-3">
+                        <span class="text-red-500 text-xl">⏰</span>
+                        <h3 class="text-lg font-semibold">Decision maker bottlenecks</h3>
+                    </div>
+                    <p class="text-gray-600">You finally reach the right person, and then it's 'circle back'</p>
+                </div>
+                <div class="bg-white border border-l-4 border-l-red-500 p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center space-x-3 mb-3">
+                        <span class="text-red-500 text-xl">📈</span>
+                        <h3 class="text-lg font-semibold">Platform changes</h3>
+                    </div>
+                    <p class="text-gray-600">LinkedIn, email deliverability, even ad targeting rules keep shifting</p>
+                </div>
+                <div class="bg-white border border-l-4 border-l-red-500 p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center space-x-3 mb-3">
+                        <span class="text-red-500 text-xl">👥</span>
+                        <h3 class="text-lg font-semibold">Time sinks</h3>
+                    </div>
+                    <p class="text-gray-600">Following up with dozens of warm leads that never turn into anything</p>
+                </div>
+                <div class="bg-white border border-l-4 border-l-red-500 p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center space-x-3 mb-3">
+                        <span class="text-red-500 text-xl">📞</span>
+                        <h3 class="text-lg font-semibold">24/7 availability pressure</h3>
+                    </div>
+                    <p class="text-gray-600">If you miss that one call or DM, someone else gets the deal</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 hero-gradient text-white">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                The Solution: Invisible Automation That Actually Works
+            </h2>
+            <p class="text-xl mb-12 max-w-4xl mx-auto opacity-90">
+                Our system plugs into your existing communication channels and nurtures leads automatically. 
+                Same workflow you've used for years, just automated behind the scenes.
+            </p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="bg-white/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">⚡</span>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Works Inside Your Existing Tools</h3>
+                    <p class="text-sm opacity-90">No new apps, no new logins, no training required. Plugs into your current email, WhatsApp, and CRM.</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-white/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">💬</span>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">7 Pre-Built Nurture Sequences</h3>
+                    <p class="text-sm opacity-90">Welcome, interested-but-not-ready, cold re-engagement, meeting follow-up, and more.</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-white/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">⏰</span>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">24-Hour Setup Guarantee</h3>
+                    <p class="text-sm opacity-90">Get your automation running within 24 hours or your money back.</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-white/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">📊</span>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Automated Lead Scoring</h3>
+                    <p class="text-sm opacity-90">Automatically prioritize your hottest leads based on engagement and behavior.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Simple, Transparent Pricing
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Choose the plan that fits your business size. Upgrade or downgrade anytime.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Starter Plan -->
+                <div class="bg-white rounded-lg shadow-lg p-8 border">
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold mb-2">Starter</h3>
+                        <div class="flex items-baseline justify-center mb-2">
+                            <span class="text-4xl font-bold">£97</span>
+                            <span class="text-gray-500 ml-1">/month</span>
+                        </div>
+                        <p class="text-gray-600">Perfect for small businesses getting started</p>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center"><span class="text-green-500 mr-3">✓</span>Up to 500 leads</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-3">✓</span>Email + SMS automation</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-3">✓</span>3 nurture sequences</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-3">✓</span>Basic reporting</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-3">✓</span>Email support</li>
+                    </ul>
+                    <button class="w-full border border-gray-300 py-3 rounded-md hover:bg-gray-50">Start Free Trial</button>
+                </div>
+
+                <!-- Professional Plan -->
+                <div class="bg-white rounded-lg shadow-lg p-8 border-2 border-blue-500 relative transform scale-105">
+                    <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white px-4 py-1 rounded-full text-sm">
+                        Most Popular
+                    </div>
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold mb-2">Professional</h3>
+                        <div class="flex items-baseline justify-center mb-2">
+                            <span class="text-4xl font-bold">£197</span>
+                            <span class="text-gray-500 ml-1">/month</span>
+                        </div>
+                        <p class="text-gray-600">Most popular for growing businesses</p>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center"><span class="text-green-500 mr-3">✓</span>Up to 2,000 leads</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-3">✓</span>Email + SMS + WhatsApp</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-3">✓</span>7 nurture sequences</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-3">✓</span>Advanced reporting</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-3">✓</span>Priority support</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-3">✓</span>Lead scoring</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-3">✓</span>CRM integration</li>
+                    </ul>
+                    <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-md">Start Free Trial</button>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="bg-white rounded-lg shadow-lg p-8 border">
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold mb-2">Enterprise</h3>
+                        <div class="flex items-baseline justify-center mb-2">
+                            <span class="text-4xl font-bold">£397</span>
+                            <span class="text-gray-500 ml-1">/month</span>
+                        </div>
+                        <p class="text-gray-600">For established businesses scaling fast</p>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center"><span class="text-green-500 mr-3">✓</span>Unlimited leads</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-3">✓</span>Full automation suite</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-3">✓</span>Custom sequences</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-3">✓</span>Real-time analytics</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-3">✓</span>Phone support</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-3">✓</span>Custom integrations</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-3">✓</span>Dedicated success manager</li>
+                    </ul>
+                    <button class="w-full border border-gray-300 py-3 rounded-md hover:bg-gray-50">Start Free Trial</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    What Our Customers Say
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Real results from real businesses using our lead nurture automation.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white border border-l-4 border-l-green-500 p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center space-x-1 mb-4">
+                        <span class="text-yellow-400">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <h4 class="text-lg font-semibold mb-1">Sarah Mitchell</h4>
+                    <p class="text-gray-600 text-sm mb-4">Mitchell Consulting</p>
+                    <p class="text-gray-600 italic">"Went from losing 60% of leads to converting 40% of cold prospects. This system pays for itself in the first week."</p>
+                </div>
+                <div class="bg-white border border-l-4 border-l-green-500 p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center space-x-1 mb-4">
+                        <span class="text-yellow-400">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <h4 class="text-lg font-semibold mb-1">James Thompson</h4>
+                    <p class="text-gray-600 text-sm mb-4">Thompson Manufacturing</p>
+                    <p class="text-gray-600 italic">"Finally, automation that actually works with how we do business. No more missed follow-ups, no more lost deals."</p>
+                </div>
+                <div class="bg-white border border-l-4 border-l-green-500 p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center space-x-1 mb-4">
+                        <span class="text-yellow-400">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <h4 class="text-lg font-semibold mb-1">Emma Rodriguez</h4>
+                    <p class="text-gray-600 text-sm mb-4">Rodriguez Legal</p>
+                    <p class="text-gray-600 italic">"Saved 15 hours per week on lead follow-up. Now I can focus on what I do best - serving clients."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-900 text-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                Ready to Stop Losing Leads?
+            </h2>
+            <p class="text-xl mb-8 opacity-90">
+                Join hundreds of businesses that have automated their lead nurturing and increased conversions by 40%.
+            </p>
+            <div class="bg-white/10 rounded-lg p-8 max-w-md mx-auto">
+                <h3 class="text-xl font-semibold mb-4">Get Started Free</h3>
+                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-4">
+                    <input type="email" name="email" placeholder="Enter your email" required 
+                           class="w-full px-4 py-3 rounded-md text-gray-900">
+                    <input type="text" name="company" placeholder="Company name" required 
+                           class="w-full px-4 py-3 rounded-md text-gray-900">
+                    <input type="hidden" name="_subject" value="New Lead Nurture Automation Signup">
+                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-md font-medium">
+                        Start Free Trial →
+                    </button>
+                </form>
+                <p class="text-xs mt-4 opacity-75">
+                    No credit card required. 7-day free trial. Cancel anytime.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Have Questions? Get in Touch
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Our team is here to help you get started with lead nurture automation.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-xl font-semibold mb-6">Contact Information</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <span class="text-blue-600">📧</span>
+                            <span>support@leadnurturepro.com</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="text-blue-600">📞</span>
+                            <span>+44 (0) 1234 567890</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="text-blue-600">💬</span>
+                            <span>Live chat available 9am-6pm GMT</span>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <h4 class="font-semibold mb-4">Quick Setup Call</h4>
+                        <p class="text-gray-600 mb-4">
+                            Book a 15-minute call with our automation experts to get your system set up in record time.
+                        </p>
+                        <button class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-md">
+                            Schedule Free Call
+                        </button>
+                    </div>
+                </div>
+                <div>
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h4 class="text-xl font-semibold mb-2">Send us a Message</h4>
+                        <p class="text-gray-600 mb-6">We'll get back to you within 24 hours.</p>
+                        <form action="https://formspree.io/f/YOUR_CONTACT_FORM_ID" method="POST" class="space-y-4">
+                            <input type="text" name="name" placeholder="Your name" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-md">
+                            <input type="email" name="email" placeholder="Your email" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-md">
+                            <input type="text" name="company" placeholder="Company name" 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-md">
+                            <textarea name="message" placeholder="How can we help you?" rows="4" required 
+                                      class="w-full px-4 py-3 border border-gray-300 rounded-md"></textarea>
+                            <input type="hidden" name="_subject" value="New Contact Form Submission">
+                            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-md">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <span class="text-blue-400 text-xl">⚡</span>
+                        <span class="text-lg font-bold">LeadNurture Pro</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">
+                        The lead nurturing automation that works inside your existing tools.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Product</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white">Features</a></li>
+                        <li><a href="#" class="hover:text-white">Pricing</a></li>
+                        <li><a href="#" class="hover:text-white">Integrations</a></li>
+                        <li><a href="#" class="hover:text-white">API</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white">Help Center</a></li>
+                        <li><a href="#" class="hover:text-white">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-white">Setup Guide</a></li>
+                        <li><a href="#" class="hover:text-white">Status</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white">About</a></li>
+                        <li><a href="#" class="hover:text-white">Blog</a></li>
+                        <li><a href="#" class="hover:text-white">Privacy</a></li>
+                        <li><a href="#" class="hover:text-white">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2025 LeadNurture Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Button for Mobile -->
+    <button class="floating-btn bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg px-6 py-3 font-medium"
+            onclick="document.querySelector('form').scrollIntoView({ behavior: 'smooth' })">
+        Start Free Trial
+    </button>
+
+    <script>
+        // Countdown timer
+        let timeLeft = 24 * 60 * 60; // 24 hours in seconds
+        
+        function updateCountdown() {
+            const hours = Math.floor(timeLeft / 3600);
+            const minutes = Math.floor((timeLeft % 3600) / 60);
+            const seconds = timeLeft % 60;
+            
+            document.getElementById('countdown').textContent = 
+                `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            
+            if (timeLeft > 0) {
+                timeLeft--;
+            }
+        }
+        
+        // Update countdown every second
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // Visitor count simulation
+        let visitorCount = 247;
+        function updateVisitors() {
+            visitorCount += Math.floor(Math.random() * 3);
+            document.getElementById('visitors').textContent = visitorCount;
+        }
+        
+        // Update visitor count every 30 seconds
+        setInterval(updateVisitors, 30000);
+    </script>
+</body>
+</html>
+
